@@ -6,6 +6,7 @@
     <e p="D:\git\MDP\MDPSingle" t="IncludeFlat">
       <e p="MDPSingle" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="IProjectableModel.cs" t="Include" />
         <e p="MDObject.cs" t="Include" />
         <e p="MDPoint.cs" t="Include" />
         <e p="MDPSingle.csproj" t="IncludeRecursive" />

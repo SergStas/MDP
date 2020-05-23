@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93c9eba5-3e7f-44eb-8bf7-8175da4d0ac4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MDPSingle/MDPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDPSingle/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MDPSingle/MDObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDPSingle/MDObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MDPSingle/MDObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,14 +16,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/MDObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/MDPoint.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MDPSingle/MDObject.cs" />
         <option value="$PROJECT_DIR$/MDPSingle/MDPoint.cs" />
+        <option value="$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" />
+        <option value="$PROJECT_DIR$/MDPSingle/MDObject.cs" />
       </list>
     </option>
   </component>
@@ -50,8 +54,17 @@
       <option name="presentableId" value="Default" />
       <updated>1590211796995</updated>
       <workItem from="1590211810451" duration="35000" />
-      <workItem from="1590212077746" duration="837000" />
+      <workItem from="1590212077746" duration="1240000" />
+      <workItem from="1590235046390" duration="734000" />
     </task>
+    <task id="LOCAL-00001" summary="Added MDPoint">
+      <created>1590213316644</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590213316644</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,10 +77,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added MDPoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MDPoint" />
   </component>
 </project>
