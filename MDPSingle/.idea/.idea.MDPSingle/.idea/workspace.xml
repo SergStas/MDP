@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93c9eba5-3e7f-44eb-8bf7-8175da4d0ac4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDPSingle/MDObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MDPSingle/MDObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDPSingle.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MDPSingle.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MatrixCalculator/Matrix.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/MDObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/MDPoint.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,6 +26,8 @@
         <option value="$PROJECT_DIR$/MDPSingle/MDPoint.cs" />
         <option value="$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" />
         <option value="$PROJECT_DIR$/MDPSingle/MDObject.cs" />
+        <option value="$PROJECT_DIR$/MatrixCalculator/Class1.cs" />
+        <option value="$PROJECT_DIR$/MatrixCalculator/Matrix.cs" />
       </list>
     </option>
   </component>
@@ -55,7 +57,8 @@
       <updated>1590211796995</updated>
       <workItem from="1590211810451" duration="35000" />
       <workItem from="1590212077746" duration="1240000" />
-      <workItem from="1590235046390" duration="734000" />
+      <workItem from="1590235046390" duration="1039000" />
+      <workItem from="1590242002889" duration="1470000" />
     </task>
     <task id="LOCAL-00001" summary="Added MDPoint">
       <created>1590213316644</created>
@@ -64,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590213316644</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Started work with MDObject">
+      <created>1590235898701</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590235898701</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +97,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added MDPoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MDPoint" />
+    <MESSAGE value="Started work with MDObject" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started work with MDObject" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1590242072554">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1590242072554" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1590236041637">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590236041637" />
   </component>
 </project>
