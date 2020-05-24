@@ -9,8 +9,8 @@ namespace MatrixCalculator
             if (!SizesAreEqual(m1, m2))
                 throw new ArgumentException();
             Matrix result = m1.GetCopy();
-            for (int i = 0; i < m2.MatrixSize.Height; i++)
-            for (int j = 0; j < m2.MatrixSize.Width; j++)
+            for (int i = 0; i < m2.Size.Height; i++)
+            for (int j = 0; j < m2.Size.Width; j++)
                 result[i, j] += m2[i, j];
             return result;
         }
@@ -20,8 +20,8 @@ namespace MatrixCalculator
             if (!SizesAreEqual(m1, m2))
                 throw new ArgumentException();
             Matrix result = m1.GetCopy();
-            for (int i = 0; i < m2.MatrixSize.Height; i++)
-            for (int j = 0; j < m2.MatrixSize.Width; j++)
+            for (int i = 0; i < m2.Size.Height; i++)
+            for (int j = 0; j < m2.Size.Width; j++)
                 result[i, j] -= m2[i, j];
             return result;
         }
@@ -29,8 +29,8 @@ namespace MatrixCalculator
         public static Matrix MulByConstant(Matrix m1, double k)
         {
             Matrix result = m1.GetCopy();
-            for (int i = 0; i < m1.MatrixSize.Height; i++)
-            for (int j = 0; j < m1.MatrixSize.Width; j++)
+            for (int i = 0; i < m1.Size.Height; i++)
+            for (int j = 0; j < m1.Size.Width; j++)
                 result[i, j] *= k;
             return result;
         }
@@ -40,13 +40,34 @@ namespace MatrixCalculator
             if (Math.Abs(k) < Double.Epsilon)
                 throw new DivideByZeroException();
             Matrix result = m1.GetCopy();
-            for (int i = 0; i < m1.MatrixSize.Height; i++)
-            for (int j = 0; j < m1.MatrixSize.Width; j++)
+            for (int i = 0; i < m1.Size.Height; i++)
+            for (int j = 0; j < m1.Size.Width; j++)
                 result[i, j] /= k;
             return result;
         }
 
+        public static Matrix MultiplyMatrices(Matrix m1, Matrix m2)
+        {
+            if (m1.Size.Width != m2.Size.Height)
+                throw new ArgumentException();
+            Matrix result = new Matrix(m1.Size.Height, m2.Size.Width);
+            for (int i=0;i<m1.Size.Height;i++)
+            for (int j = 0; j < m2.Size.Width; j++)
+                result[i, j] = GetDotProduct(m1.GetRow(i), m2.GetColumn(j));
+            return result;
+        }
+
+        public static double GetDotProduct(double[] v1, double[] v2)
+        {
+            if (v1.Length != v2.Length)
+                throw new ArgumentException();
+            double result = 0;
+            for (int i = 0; i < v1.Length; i++)
+                result += v1[i] * v2[i];
+            return result;
+        }
+
         public static bool SizesAreEqual(Matrix m1, Matrix m2) =>
-            m1.MatrixSize.Width == m2.MatrixSize.Width && m1.MatrixSize.Height == m2.MatrixSize.Height;
+            m1.Size.Width == m2.Size.Width && m1.Size.Height == m2.Size.Height;
     }
 }

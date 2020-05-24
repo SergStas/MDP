@@ -7,12 +7,12 @@ namespace MatrixCalculator
 {
     public class Matrix : IEnumerable<double>
     {
-        public Size MatrixSize { get; }
+        public Size Size { get; }
         private double[,] _cells;
 
         public Matrix(int rowsCount, int columnsCount)
         {
-            MatrixSize = new Size(columnsCount, rowsCount);
+            Size = new Size(columnsCount, rowsCount);
             _cells = new double[rowsCount, columnsCount];
         }
 
@@ -25,13 +25,13 @@ namespace MatrixCalculator
         {
             get
             {
-                 if (!InBounds(i,MatrixSize.Height) || !InBounds(j, MatrixSize.Width))
+                 if (!InBounds(i,Size.Height) || !InBounds(j, Size.Width))
                      throw new IndexOutOfRangeException();
                  return _cells[i, j];
             }
             set
             {
-                if (!InBounds(i,MatrixSize.Height) || !InBounds(j, MatrixSize.Width))
+                if (!InBounds(i,Size.Height) || !InBounds(j, Size.Width))
                     throw new IndexOutOfRangeException();
                 _cells[i, j] = value;
             }
@@ -39,14 +39,14 @@ namespace MatrixCalculator
 
         public void Fill(double[,] content)
         {
-            if (MatrixSize.Width != content.GetLength(1) || MatrixSize.Height != content.GetLength(0))
+            if (Size.Width != content.GetLength(1) || Size.Height != content.GetLength(0))
                 throw new ArgumentException();
             _cells = content;
         }
 
         public void SetRow(int index, double[] content)
         {
-            if (!InBounds(index,MatrixSize.Height) || content.Length != MatrixSize.Width)
+            if (!InBounds(index,Size.Height) || content.Length != Size.Width)
                 throw new ArgumentException();
             for (int i = 0; i < content.Length; i++)
                 _cells[index, i] = content[i];
@@ -54,7 +54,7 @@ namespace MatrixCalculator
 
         public void SetColumn(int index, double[] content)
         {
-            if (!InBounds(index,MatrixSize.Width) || content.Length != MatrixSize.Height)
+            if (!InBounds(index,Size.Width) || content.Length != Size.Height)
                 throw new ArgumentException();
             for (int i = 0; i < content.Length; i++)
                 _cells[i, index] = content[i];
@@ -66,23 +66,42 @@ namespace MatrixCalculator
         public double[,] ToDDimArray() =>
             _cells;
 
-        public IEnumerable<double> GetRow(int index)
+        public double[] GetRow(int index)
         {
-            if (!InBounds(index,MatrixSize.Height))
+            if (!InBounds(index,Size.Height))
                 throw new IndexOutOfRangeException();
-            for (int i = 0; i < MatrixSize.Width; i++)
-                yield return _cells[index, i];
+            double[] result = new double[Size.Width];
+            for (int i = 0; i < Size.Width; i++)
+                result[i] = _cells[index, i];
+            return result;
         }
 
-        public IEnumerable<double> GetColumn(int index)
+        public double[] GetColumn(int index)
         {
-            if (!InBounds(index,MatrixSize.Width))
+            if (!InBounds(index,Size.Width))
                 throw new IndexOutOfRangeException();
-            for (int i = 0; i < MatrixSize.Height; i++)
-                yield return _cells[i, index];
+            double[] result = new double[Size.Height];
+            for (int i = 0; i < Size.Height; i++)
+                result[i] = _cells[i, index];
+            return result;
         }
 
-        private bool InBounds(int index, int limit) =>
+        public static Matrix operator +(Matrix m1, Matrix m2) =>
+            Calculations.SumMatrices(m1, m2);
+
+        public static Matrix operator -(Matrix m1, Matrix m2) =>
+            Calculations.SubMatrices(m1, m2);
+
+        public static Matrix operator *(Matrix m1, Matrix m2) =>
+            Calculations.MultiplyMatrices(m1, m2);
+
+        public static Matrix operator *(Matrix m1, double k) =>
+            Calculations.MulByConstant(m1, k);
+
+        public static Matrix operator *(double k, Matrix m1) =>
+            Calculations.MulByConstant(m1, k);
+
+        private static bool InBounds(int index, int limit) =>
             index >= 0 && index < limit;
 
         public IEnumerator<double> GetEnumerator()
@@ -95,17 +114,17 @@ namespace MatrixCalculator
             GetEnumerator();
 
         public override string ToString() =>
-            $"Matrix[{MatrixSize.Height}, {MatrixSize.Width}]";
+            $"Matrix[{Size.Height}, {Size.Width}]";
 
         public override bool Equals(object? obj) =>
             obj is Matrix matrix && Equals(matrix);
 
         private bool Equals(Matrix matrix)
         {
-            if (MatrixSize.Width != matrix.MatrixSize.Width || MatrixSize.Height != matrix.MatrixSize.Height)
+            if (Size.Width != matrix.Size.Width || Size.Height != matrix.Size.Height)
                 return false;
-            for (int i = 0; i < MatrixSize.Height; i++) 
-                for (int j = 0; j < MatrixSize.Width; j++)
+            for (int i = 0; i < Size.Height; i++) 
+                for (int j = 0; j < Size.Width; j++)
                     if (Math.Abs(matrix[i, j] - _cells[i, j]) < 1e-7)
                         return false;
             return true;
