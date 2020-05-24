@@ -4,7 +4,7 @@
     <list default="true" id="93c9eba5-3e7f-44eb-8bf7-8175da4d0ac4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MDPSingle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDPSingle.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MDPSingle.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatrixCalculator/Calculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MatrixCalculator/Calculations.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MatrixCalculator/Matrix.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MatrixCalculator/Calculations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/MDObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MDPSingle/MDPoint.cs" root0="FORCE_HIGHLIGHTING" />
@@ -27,7 +28,9 @@
         <option value="$PROJECT_DIR$/MDPSingle/IProjectableModel.cs" />
         <option value="$PROJECT_DIR$/MDPSingle/MDObject.cs" />
         <option value="$PROJECT_DIR$/MatrixCalculator/Class1.cs" />
+        <option value="$PROJECT_DIR$/MatrixCalculator/Calculator.cs" />
         <option value="$PROJECT_DIR$/MatrixCalculator/Matrix.cs" />
+        <option value="$PROJECT_DIR$/MatrixCalculator/Calculations.cs" />
       </list>
     </option>
   </component>
@@ -43,6 +46,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
@@ -58,7 +67,8 @@
       <workItem from="1590211810451" duration="35000" />
       <workItem from="1590212077746" duration="1240000" />
       <workItem from="1590235046390" duration="1039000" />
-      <workItem from="1590242002889" duration="1470000" />
+      <workItem from="1590242002889" duration="2672000" />
+      <workItem from="1590297805412" duration="1338000" />
     </task>
     <task id="LOCAL-00001" summary="Added MDPoint">
       <created>1590213316644</created>
@@ -74,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590235898701</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created matrix calculation library">
+      <created>1590244464003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590244464003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,16 +115,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added MDPoint" />
     <MESSAGE value="Started work with MDObject" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started work with MDObject" />
+    <MESSAGE value="Created matrix calculation library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created matrix calculation library" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1590242072554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1590242072554" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1590236041637">
+    <state x="790" y="220" key="RiderGenerateDialog" timestamp="1590243704354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590236041637" />
+    <state x="790" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590243704354" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1590244540867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590244540867" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1590298487068">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590298487068" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590298000732">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590298000732" />
   </component>
 </project>
