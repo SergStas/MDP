@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDPSingle", "MDPSingle\MDPSingle.csproj", "{62FD5434-1D76-4E30-9B62-2CDB97BB56C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixCalculator", "MatrixCalculator\MatrixCalculator.csproj", "{DD559C8E-EDEE-49CF-A260-C2B5892A3378}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixCalculations", "MatrixCalculations\MatrixCalculations.csproj", "{13DF66FD-DC24-4CDE-B80F-2215C978C22A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{62FD5434-1D76-4E30-9B62-2CDB97BB56C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62FD5434-1D76-4E30-9B62-2CDB97BB56C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62FD5434-1D76-4E30-9B62-2CDB97BB56C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD559C8E-EDEE-49CF-A260-C2B5892A3378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD559C8E-EDEE-49CF-A260-C2B5892A3378}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD559C8E-EDEE-49CF-A260-C2B5892A3378}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD559C8E-EDEE-49CF-A260-C2B5892A3378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DF66FD-DC24-4CDE-B80F-2215C978C22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DF66FD-DC24-4CDE-B80F-2215C978C22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DF66FD-DC24-4CDE-B80F-2215C978C22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DF66FD-DC24-4CDE-B80F-2215C978C22A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
