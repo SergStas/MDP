@@ -63,7 +63,7 @@ namespace MatrixCalculator
         public Matrix GetCopy() =>
             new Matrix(_cells);
 
-        public double[,] ToDDimArray() =>
+        public double[,] GetDDimArray() =>
             _cells;
 
         public double[] GetRow(int index)
