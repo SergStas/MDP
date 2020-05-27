@@ -12,6 +12,8 @@ namespace MatrixCalculator
 
         public Matrix(int rowsCount, int columnsCount)
         {
+            if (rowsCount < 1 || columnsCount < 1)
+                throw new ArgumentException();
             Size = new Size(columnsCount, rowsCount);
             _cells = new double[rowsCount, columnsCount];
         }
@@ -101,9 +103,6 @@ namespace MatrixCalculator
         public static Matrix operator *(double k, Matrix m1) =>
             Calculations.MulByConstant(m1, k);
 
-        private static bool InBounds(int index, int limit) =>
-            index >= 0 && index < limit;
-
         public IEnumerator<double> GetEnumerator()
         {
             foreach (double e in _cells)
@@ -130,7 +129,10 @@ namespace MatrixCalculator
             return true;
         }
 
-        public static Matrix FromDoubleArray(double[,] cells) =>
+        public static Matrix FromTowDimArray(double[,] cells) =>
             new Matrix(cells.GetLength(0), cells.GetLength(1)) {_cells = cells};
+
+        private static bool InBounds(int index, int limit) =>
+            index >= 0 && index < limit;
     }
 } 
