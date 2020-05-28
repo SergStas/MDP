@@ -9,6 +9,9 @@ namespace MatrixTests
     {
         public static Matrix CompileMatrix(int height, int width, double[] values) =>
             CompileMatrix(height, width, values, false);
+
+        public static Matrix CompileMatrix(int width, double[] values) =>
+            CompileMatrix(values.Length / width, width, values);
         
         public static Matrix CompileMatrix(int height, int width, double[] values, bool usingFill)
         {
