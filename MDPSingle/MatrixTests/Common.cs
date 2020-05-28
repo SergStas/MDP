@@ -7,6 +7,9 @@ namespace MatrixTests
 {
     public static class Common
     {
+        public static Matrix CompileMatrix(int height, int width, double[] values) =>
+            CompileMatrix(height, width, values, false);
+        
         public static Matrix CompileMatrix(int height, int width, double[] values, bool usingFill)
         {
             if (height * width < values.Length)

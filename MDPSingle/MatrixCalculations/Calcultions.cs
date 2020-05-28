@@ -6,7 +6,7 @@ namespace MatrixCalculator
     {
         public static Matrix SumMatrices(Matrix m1, Matrix m2)
         {
-            if (!SizesAreEqual(m1, m2))
+            if (!Matrix.SizesAreEqual(m1, m2))
                 throw new ArgumentException();
             Matrix result = m1.GetCopy();
             for (int i = 0; i < m2.Size.Height; i++)
@@ -17,7 +17,7 @@ namespace MatrixCalculator
         
         public static Matrix SubMatrices(Matrix m1, Matrix m2)
         {
-            if (!SizesAreEqual(m1, m2))
+            if (!Matrix.SizesAreEqual(m1, m2))
                 throw new ArgumentException();
             Matrix result = m1.GetCopy();
             for (int i = 0; i < m2.Size.Height; i++)
@@ -66,8 +66,5 @@ namespace MatrixCalculator
                 result += v1[i] * v2[i];
             return result;
         }
-
-        public static bool SizesAreEqual(Matrix m1, Matrix m2) =>
-            m1.Size.Width == m2.Size.Width && m1.Size.Height == m2.Size.Height;
     }
 }
