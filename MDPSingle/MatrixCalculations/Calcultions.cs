@@ -66,5 +66,15 @@ namespace MatrixCalculator
                 result += v1[i] * v2[i];
             return result;
         }
+
+        public static Matrix Transpose(Matrix matrix) //TODO: tests
+        {
+            double [,] newCells = new double[matrix.Size.Width,matrix.Size.Height];
+            double[,] cells = matrix.GetDDimArray();
+            for (int i = 0; i < matrix.Size.Height; i++)
+            for (int j = 0; j < matrix.Size.Width; j++)
+                newCells[j, i] = cells[i, j];
+            return Matrix.FromTwoDimArray(newCells);
+        }
     }
 }

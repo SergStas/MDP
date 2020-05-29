@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MDPSingle
 {
-    public class MDObject
+    public class MDObject : IProjectableModel
     {
         public int Dim { get; }
         public List<MDPoint> Points { get; }

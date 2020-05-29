@@ -89,6 +89,9 @@ namespace MatrixCalculator
             return result;
         }
 
+        public Matrix Transpose() =>
+            Calculations.Transpose(this);
+
         public IEnumerator<double> GetEnumerator()
         {
             foreach (double e in _cells)
