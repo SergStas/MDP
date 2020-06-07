@@ -161,5 +161,18 @@ namespace MatrixTests
             bool equality = expectedResult.Equals(actualResult);
             Assert.True(equality);
         }
+
+        [Test]
+        public void TransposingTest()
+        {
+            double[,] cells = new[,] {{1, 0, 2.0}, {0, 2.0, 1}};
+            Matrix matrix = new Matrix(cells);
+            Matrix transposed = matrix.Transpose();
+            Assert.AreEqual(matrix.Size.Height, transposed.Size.Width);
+            Assert.AreEqual(matrix.Size.Width, transposed.Size.Height);
+            Assert.AreEqual(matrix[1, 0], transposed[0, 1]);
+            Assert.AreEqual(matrix[0, 0], transposed[0, 0]);
+            Assert.AreEqual(matrix[1, 2], transposed[2, 1]);
+        }
     }
 }

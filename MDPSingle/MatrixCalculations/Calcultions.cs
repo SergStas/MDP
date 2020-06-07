@@ -67,7 +67,7 @@ namespace MatrixCalculator
             return result;
         }
 
-        public static Matrix Transpose(Matrix matrix) //TODO: tests
+        public static Matrix Transpose(Matrix matrix)
         {
             double [,] newCells = new double[matrix.Size.Width,matrix.Size.Height];
             double[,] cells = matrix.GetDDimArray();

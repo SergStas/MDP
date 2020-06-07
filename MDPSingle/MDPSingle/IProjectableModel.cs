@@ -1,14 +1,13 @@
-﻿using MatrixCalculator;
+﻿using System.Collections.Generic;
+using MatrixCalculator;
 using Microsoft.VisualBasic.CompilerServices;
 
 namespace MDPSingle
 {
     public interface IProjectableModel
     {
-        public int Dim { get; }
-        public Matrix ToMatrix();
+        public IEnumerable<Matrix> ToMatrices();
 
-        public Matrix Project(Matrix transformationMatrix) =>
-            transformationMatrix * ToMatrix();
+        public IEnumerable<Matrix> Project(Matrix transformationMatrix);
     }
 }
